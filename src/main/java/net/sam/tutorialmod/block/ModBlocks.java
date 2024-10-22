@@ -30,8 +30,8 @@ public class ModBlocks {
     public static final Block SRABON_BRK_BLOCK = registerBlock("srabon_brk_block",
             new Block(AbstractBlock.Settings.create().strength(1).sounds(BlockSoundGroup.SHROOMLIGHT).burnable()));
 
-
-
+    public static final Block PUMICE = registerBlock("pumice",
+            new Block(AbstractBlock.Settings.create().strength(2).sounds(BlockSoundGroup.CALCITE).burnable()));
 
 
 
@@ -55,6 +55,7 @@ public class ModBlocks {
             fabricItemGroupEntries.add(ModBlocks.PINK_GARNET_BLOCK);
             fabricItemGroupEntries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
             fabricItemGroupEntries.add(ModBlocks.SRABON_BRK_BLOCK);
+            fabricItemGroupEntries.add(ModBlocks.PUMICE);
         });
     }
 }
