@@ -18,6 +18,8 @@ public class ModItemGroups {
                     .entries((displayContext, entries) -> {
                         entries.add(ModItems.PINK_GARNET);
                         entries.add(ModItems.RAW_PINK_GARNET);
+                        entries.add((ModItems.BRK_BITS));
+                        entries.add(ModItems.PRETZEL_BURGER);
                     })
                     .build());
 
@@ -29,6 +31,7 @@ public class ModItemGroups {
                         entries.add(ModBlocks.PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.RAW_PINK_GARNET_BLOCK);
                         entries.add(ModBlocks.SRABON_BRK_BLOCK);
+                        entries.add(ModBlocks.PUMICE);
                     })
                     .build());
 

@@ -28,7 +28,7 @@ public class ModBlocks {
 
 
     public static final Block SRABON_BRK_BLOCK = registerBlock("srabon_brk_block",
-            new Block(AbstractBlock.Settings.create().strength(1).sounds(BlockSoundGroup.SHROOMLIGHT).burnable()));
+            new Block(AbstractBlock.Settings.create().strength(1).sounds(BlockSoundGroup.WART_BLOCK).burnable()));
 
     public static final Block PUMICE = registerBlock("pumice",
             new Block(AbstractBlock.Settings.create().strength(2).sounds(BlockSoundGroup.CALCITE).burnable()));
