@@ -3,6 +3,7 @@ package net.sam.tutorialmod;
 import net.fabricmc.api.ModInitializer;
 
 import net.sam.tutorialmod.block.ModBlocks;
+import net.sam.tutorialmod.item.ModItemGroups;
 import net.sam.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -13,6 +14,8 @@ public class TutorialMod implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		ModItemGroups.registerItemGroups();
+
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
 	}
