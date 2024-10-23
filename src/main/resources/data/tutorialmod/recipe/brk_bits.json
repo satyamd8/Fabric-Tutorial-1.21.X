@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "ingredients": [
+    {
+      "item": "tutorialmod:srabon_brk_block"
+    }
+  ],
+  "result": {
+    "count": 4,
+    "id": "tutorialmod:brk_bits"
+  }
+}
