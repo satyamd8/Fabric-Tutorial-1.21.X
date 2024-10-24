@@ -10,6 +10,7 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sam.tutorialmod.TutorialMod;
+import net.sam.tutorialmod.item.custom.ChiselItem;
 
 public class ModItems {
 
@@ -20,9 +21,11 @@ public class ModItems {
             .food(new FoodComponent.Builder()
                     .nutrition(8)
                     .saturationModifier(1f)
-                    .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 15, 2), 0.75f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 2), 0.75f)
                     .build())
     ));
+
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
 
 
     private static Item registerItem(String name, Item item){
