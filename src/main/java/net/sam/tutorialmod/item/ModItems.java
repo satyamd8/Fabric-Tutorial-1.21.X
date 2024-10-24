@@ -1,6 +1,9 @@
 package net.sam.tutorialmod.item;
 
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.minecraft.component.type.FoodComponent;
+import net.minecraft.entity.effect.StatusEffectInstance;
+import net.minecraft.entity.effect.StatusEffects;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
 import net.minecraft.registry.Registries;
@@ -13,7 +16,13 @@ public class ModItems {
     public static final Item PINK_GARNET = registerItem("pink_garnet", new Item(new Item.Settings()));
     public static final Item RAW_PINK_GARNET = registerItem("raw_pink_garnet", new Item(new Item.Settings()));
     public static final Item BRK_BITS = registerItem("brk_bits", new Item(new Item.Settings()));
-    public static final Item PRETZEL_BURGER = registerItem("pretzel_burger", new Item(new Item.Settings()));
+    public static final Item PRETZEL_BURGER = registerItem("pretzel_burger", new Item(new Item.Settings()
+            .food(new FoodComponent.Builder()
+                    .nutrition(8)
+                    .saturationModifier(1f)
+                    .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 15, 2), 0.75f)
+                    .build())
+    ));
 
 
     private static Item registerItem(String name, Item item){
