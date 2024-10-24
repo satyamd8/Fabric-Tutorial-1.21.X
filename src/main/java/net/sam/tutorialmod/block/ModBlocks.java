@@ -4,6 +4,7 @@ import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
+import net.minecraft.block.ExperienceDroppingBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
@@ -12,6 +13,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.intprovider.UniformIntProvider;
 import net.sam.tutorialmod.TutorialMod;
 
 import javax.swing.text.html.BlockView;
@@ -25,13 +27,19 @@ public class ModBlocks {
     public static final Block RAW_PINK_GARNET_BLOCK = registerBlock("raw_pink_garnet_block",
             new Block(AbstractBlock.Settings.create().strength(3f)
                     .requiresTool().sounds(BlockSoundGroup.ANCIENT_DEBRIS).burnable().luminance(value -> 6)));
+    public static final Block PINK_GARNET_ORE = registerBlock("pink_garnet_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(2, 5),
+                    AbstractBlock.Settings.create().strength(3f).requiresTool()));
+    public static final Block PINK_GARNET_DEEPSLATE_ORE = registerBlock("pink_garnet_deepslate_ore",
+            new ExperienceDroppingBlock(UniformIntProvider.create(3, 6),
+                    AbstractBlock.Settings.create().strength(4f).requiresTool().sounds(BlockSoundGroup.DEEPSLATE)));
 
 
     public static final Block SRABON_BRK_BLOCK = registerBlock("srabon_brk_block",
-            new Block(AbstractBlock.Settings.create().strength(1).sounds(BlockSoundGroup.WART_BLOCK).burnable()));
+            new Block(AbstractBlock.Settings.create().strength(1f).sounds(BlockSoundGroup.WART_BLOCK).burnable()));
 
     public static final Block PUMICE = registerBlock("pumice",
-            new Block(AbstractBlock.Settings.create().strength(2).sounds(BlockSoundGroup.CALCITE).burnable()));
+            new Block(AbstractBlock.Settings.create().strength(2f).requiresTool().sounds(BlockSoundGroup.CALCITE).burnable()));
 
 
 
