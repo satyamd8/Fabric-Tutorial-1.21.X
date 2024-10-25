@@ -11,6 +11,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.sam.tutorialmod.TutorialMod;
 import net.sam.tutorialmod.item.custom.ChiselItem;
+import net.sam.tutorialmod.item.custom.PolisherItem;
 
 public class ModItems {
 
@@ -26,6 +27,7 @@ public class ModItems {
     ));
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
+    public static final Item POLISHER = registerItem("polisher", new PolisherItem(new Item.Settings().maxDamage(32)));
 
 
     private static Item registerItem(String name, Item item){
@@ -40,6 +42,11 @@ public class ModItems {
             fabricItemGroupEntries.add(RAW_PINK_GARNET);
             fabricItemGroupEntries.add(BRK_BITS);
             fabricItemGroupEntries.add(PRETZEL_BURGER);
+        });
+
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(fabricItemGroupEntries ->  {
+            fabricItemGroupEntries.add(CHISEL);
+            fabricItemGroupEntries.add(POLISHER);
         });
     }
 }

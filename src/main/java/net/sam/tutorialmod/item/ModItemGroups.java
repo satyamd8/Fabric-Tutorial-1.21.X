@@ -22,6 +22,7 @@ public class ModItemGroups {
                         entries.add(ModItems.PRETZEL_BURGER);
 
                         entries.add(ModItems.CHISEL);
+                        entries.add(ModItems.POLISHER);
                     })
                     .build());
 
