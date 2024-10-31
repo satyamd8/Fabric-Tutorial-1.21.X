@@ -25,6 +25,8 @@ public class ModItems {
                     .statusEffect(new StatusEffectInstance(StatusEffects.ABSORPTION, 100, 2), 0.75f)
                     .build())
     ));
+    public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
+    public static final Item POLISHER = registerItem("polisher", new PolisherItem(new Item.Settings().maxDamage(32)));
 
     public static final Item CHISEL = registerItem("chisel", new ChiselItem(new Item.Settings().maxDamage(32)));
     public static final Item POLISHER = registerItem("polisher", new PolisherItem(new Item.Settings().maxDamage(32)));
